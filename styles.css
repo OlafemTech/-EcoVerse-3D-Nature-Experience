@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300&display=swap');
 
+/* Global Styles */
 
 *{
     padding: 0;
@@ -7,7 +8,6 @@
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
-
 
 .container{
     min-height: 100vh;
@@ -368,4 +368,385 @@ ul{
     .services-grid {
         grid-template-columns: 1fr;
     }
+}
+
+/* About Page Styles */
+.about-content {
+    padding: 5rem 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-section {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.about-section h2 {
+    color: #ffffff;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.about-section p {
+    color: #f0f0f0;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.about-card {
+    background: rgba(1, 103, 112, 0.675);
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.about-card:hover {
+    transform: translateY(-10px);
+}
+
+.about-card h3 {
+    color: #ffffff;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.about-card p {
+    color: #f0f0f0;
+    line-height: 1.6;
+}
+
+/* Contact Page Styles */
+.contact-content {
+    padding: 5rem 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-info {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.contact-info h2 {
+    color: #ffffff;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(188, 7, 7, 0.721);
+}
+
+.contact-info p {
+    color: #f0f0f0;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-form {
+    perspective: 1000px;
+    margin: 0 auto 3rem;
+    max-width: 800px;
+}
+
+.form-3d-container {
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease;
+}
+
+.form-3d-container:hover {
+    transform: rotateX(5deg) rotateY(5deg);
+}
+
+.form-3d-element {
+    background: rgba(11, 11, 11, 0.566);
+    backdrop-filter: blur(10px);
+    padding: 3rem;
+    border-radius: 15px;
+    box-shadow: 0 15px 30px rgba(236, 235, 235, 0.538);
+    transform-style: preserve-3d;
+    transition: all 0.4s ease;
+}
+
+.input-container {
+    position: relative;
+    margin-bottom: 2rem;
+    transform-style: preserve-3d;
+    transform: translateZ(20px);
+}
+
+.input-container label {
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    color: rgb(207, 214, 208);
+    font-size: 1rem;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    transform-origin: left top;
+    transform: translateZ(10px);
+}
+
+.input-container input,
+.input-container select,
+.input-container textarea {
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #058321;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    transform: translateZ(10px);
+}
+
+.input-line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #ffffff, transparent);
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.4s ease;
+}
+
+.input-container input:focus ~ .input-line,
+.input-container select:focus ~ .input-line,
+.input-container textarea:focus ~ .input-line {
+    transform: scaleX(1);
+}
+
+.input-container input:focus ~ label,
+.input-container select:focus ~ label,
+.input-container textarea:focus ~ label,
+.input-container input:valid ~ label,
+.input-container select:valid ~ label,
+.input-container textarea:valid ~ label {
+    transform: translateY(-1.5rem) scale(0.8) translateZ(10px);
+    color: #ffffff;
+}
+
+.input-container input:focus,
+.input-container select:focus,
+.input-container textarea:focus {
+    background: rgba(26, 25, 25, 0.15);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.submit-btn {
+    position: relative;
+    background: transparent;
+    color: #ffffff;
+    padding: 1rem 2rem;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.2s ease+alternate;
+    transform: translateZ(30px);
+    width: 100%;
+}
+
+.submit-btn span {
+    position: relative;
+    z-index: 1;
+    transition: color 0.4s ease;
+}
+
+.btn-overlay {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.9), transparent);
+    transition: transform 0.6s ease;
+    transform: skewX(-25deg);
+}
+
+.submit-btn:hover .btn-overlay {
+    transform: translateX(200%) skewX(-25deg);
+}
+
+.submit-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: #ffffff;
+    transform: translateZ(30px) scale(1.02);
+}
+
+@keyframes formFloat {
+    0%, 100% {
+        transform: translateZ(20px);
+    }
+    50% {
+        transform: translateZ(30px);
+    }
+}
+
+.form-3d-element {
+    animation: formFloat 6s ease-in-out infinite;
+}
+
+/* Enhanced responsive styles */
+@media screen and (max-width: 768px) {
+    .contact-form {
+        perspective: none;
+    }
+
+    .form-3d-container:hover {
+        transform: none;
+    }
+
+    .form-3d-element {
+        padding: 2rem;
+        animation: none;
+    }
+}
+
+.contact-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 4rem;
+}
+
+.contact-card {
+    background: rgba(1, 103, 112, 0.675);
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-10px);
+}
+
+.contact-card h3 {
+    color: #ffffff;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.contact-card p {
+    color: #f0f0f0;
+    line-height: 1.6;
+}
+
+@media screen and (max-width: 768px) {
+    .about-section h2,
+    .contact-info h2 {
+        font-size: 2rem;
+    }
+
+    .contact-form {
+        padding: 2rem;
+    }
+
+    .about-grid,
+    .contact-cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Home page specific styles */
+body:has(.container:not(:has(.about-content)):not(:has(.contact-content))) {
+    overflow: hidden;
+    height: 100vh;
+}
+
+body:has(.container:not(:has(.about-content)):not(:has(.contact-content))) .container {
+    min-height: 100vh;
+    height: 100vh;
+    overflow: hidden;
+}
+
+body:has(.container:not(:has(.about-content)):not(:has(.contact-content))) .main-container {
+    height: calc(100vh - 3rem);
+}
+
+body:has(.container:not(:has(.about-content)):not(:has(.contact-content))) .main {
+    height: 100%;
+}
+
+body:has(.container:not(:has(.about-content)):not(:has(.contact-content))) header {
+    height: 100%;
+    background: url('https://images.unsplash.com/photo-1472214103451-9374bd1c798e?q=80&w=2070&auto=format&fit=crop') no-repeat center center;
+    background-size: cover;
+}
+
+body:has(.container:not(:has(.about-content)):not(:has(.contact-content))) .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(43, 51, 59, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body:has(.container:not(:has(.about-content)):not(:has(.contact-content))) .inner {
+    max-width: 35rem;
+    text-align: center;
+    color: #fff;
+    padding: 0 2rem;
+}
+
+body:has(.container:not(:has(.about-content)):not(:has(.contact-content))) .title {
+    font-size: 2.7rem;
+}
+
+body:has(.container:not(:has(.about-content)):not(:has(.contact-content))) .btn {
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: rgba(1, 103, 112, 0.675);
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+body:has(.container:not(:has(.about-content)):not(:has(.contact-content))) .btn:hover {
+    background-color: rgba(1, 103, 112, 0.8);
+    transform: translateY(-3px);
+}
+
+/* Ensure services section is hidden on home page */
+body:has(.container:not(:has(.about-content)):not(:has(.contact-content))) .services {
+    display: none;
 }

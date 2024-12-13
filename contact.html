@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Animation - DigitalCivitas</title>
+    <title>Contact - EcoVerse</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -24,14 +24,10 @@
                 <header>
                     <div class="overlay">
                         <div class="inner">
-                            <h2 class="title">Embrace the Beauty of Nature</h2>
+                            <h2 class="title">Get in Touch</h2>
                             <p>
-                            Discover the wonders of nature, where every moment is a masterpiece of tranquility and harmony.
-                            Immerse yourself in the serene landscapes and let the soothing embrace of the natural world captivate your soul.
+                                Join us in our mission to preserve and protect nature. Your voice matters in making a difference.
                             </p>
-                            <button class="btn">
-                                Explore Nature
-                            </button>
                         </div>
                     </div>
                 </header>
@@ -43,11 +39,81 @@
         <div class="links">
             <ul>
                 <li><a href="index.html" style="--i: 0.05s">Home</a></li>
-                <!--<li><a href="service.html" style="--i: 0.1s">Services</a></li>-->
-                <li><a href="About.html" style="--i: 0.15s">About</a></li>
-                <li><a href="Contact.html" style="--i: 0.2s">Contact</a></li>
+                <li><a href="about.html" style="--i: 0.15s">About</a></li>
+                <li><a href="contact.html" style="--i: 0.2s">Contact</a></li>
             </ul>
         </div>
+
+        <section class="contact-content">
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h2>Contact Information</h2>
+                    <p>We'd love to hear from you. Reach out to us for any inquiries about our services or how you can contribute to nature preservation.</p>
+                </div>
+
+                <div class="contact-form">
+                    <div class="form-3d-container">
+                        <div class="form-3d-element">
+                            <form>
+                                <div class="form-group">
+                                    <div class="input-container">
+                                        <input type="text" placeholder="Your Name" required>
+                                        <label>Your Name</label>
+                                        <div class="input-line"></div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="input-container">
+                                        <input type="email" placeholder="Your Email" required>
+                                        <label>Your Email</label>
+                                        <div class="input-line"></div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="input-container">
+                                        <select required>
+                                            <option value="" disabled selected>Select Service</option>
+                                            <option value="ecosystem">Ecosystem Restoration</option>
+                                            <option value="wildlife">Wildlife Conservation</option>
+                                            <option value="forest">Forest Management</option>
+                                            <option value="education">Environmental Education</option>
+                                        </select>
+                                        <label>Select Service</label>
+                                        <div class="input-line"></div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="input-container">
+                                        <textarea placeholder="Your Message" rows="5" required></textarea>
+                                        <label>Your Message</label>
+                                        <div class="input-line"></div>
+                                    </div>
+                                </div>
+                                <button type="submit" class="submit-btn">
+                                    <span>Send Message</span>
+                                    <div class="btn-overlay"></div>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-cards">
+                    <div class="contact-card">
+                        <h3>Email Us</h3>
+                        <p>info@ecoverse.com</p>
+                    </div>
+                    <div class="contact-card">
+                        <h3>Call Us</h3>
+                        <p>+1 (555) 123-4567</p>
+                    </div>
+                    <div class="contact-card">
+                        <h3>Visit Us</h3>
+                        <p>123 Nature Street, Green City, EC 12345</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
 </body>
 <script src="app.js"></script>
